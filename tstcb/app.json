@@ -1,0 +1,39 @@
+{
+    "pages": [
+        "pages/tianjia/tianjia",
+        "pages/index/index",
+        "pages/xiangqing/xiangqing",
+        "pages/cart/cart"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#FF5722",
+        "backgroundColor": "#FFFFFF",
+        "list": [
+            {
+                "pagePath": "pages/tianjia/tianjia",
+                "text": "添加"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "商品"
+            },
+            {
+                "pagePath": "pages/xiangqing/xiangqing",
+                "text": "详情"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

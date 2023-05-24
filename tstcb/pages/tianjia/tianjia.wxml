@@ -1,0 +1,53 @@
+<view class="add-goods">
+    <view class="add-goods-item">
+        <text class="add-goods-label">商品名称：</text>
+        <input class="add-goods-input" placeholder="请输入商品名称" bindinput="onNameInput" style="height: 100rpx;"/>
+    </view>
+    <view class="add-goods-item">
+        <text class="add-goods-label">商品价格：</text>
+        <input class="add-goods-input" type="number" placeholder="请输入商品价格" bindinput="onPriceInput"style="height: 100rpx;" />
+    </view>
+
+    <!-- 商品图片 -->
+    <view>
+        <view class="add-goods-item">
+            <text class="add-goods-label">商品图片：</text>
+            <button class="add-goods-upload" bindtap="onUploadTap">上传图片</button>
+            <view class="add-goods-image">
+                <image class="add-goods-image" src="{{image || '默认图片的地址'}}" mode="aspectFit" bindtap="onImageTap" />
+            </view>
+        </view>
+    </view>
+
+    <view class="add-goods-item">
+        <text class="add-goods-label">价格是否上架：</text>
+        <switch class="add-goods-switch" bindchange="onGroundingChange" />
+    </view>
+    <view class="add-goods-item">
+        <text class="add-goods-label">是否参与秒杀：</text>
+        <switch class="add-goods-switch" bindchange="onRulesChange" />
+    </view>
+    <view class="add-goods-item">
+        <text class="add-goods-label">商品尺寸：</text>
+        <checkbox-group class="add-goods-size" bindchange="onSizeChange">
+            <checkbox name="S" value="S">S</checkbox>
+            <checkbox name="M" value="M">M</checkbox>
+            <checkbox name="L" value="L">L</checkbox>
+            <checkbox name="XL" value="XL">XL</checkbox>
+        </checkbox-group>
+    </view>
+    <view class="add-goods-item">
+        <text class="add-goods-label">商品颜色：</text>
+        <checkbox-group class="add-goods-color" bindchange="onColorChange">
+            <checkbox name="red" value="#f00" style="background-color: #f00;"></checkbox>
+            <checkbox name="green" value="#0f0" style="background-color: #0f0;"></checkbox>
+            <checkbox name="blue" value="#00f" style="background-color: #00f;"></checkbox>
+            <checkbox name="yellow" value="#ff0" style="background-color: #ff0;"></checkbox>
+        </checkbox-group>
+    </view>
+    <view class="add-goods-item">
+        <text class="add-goods-label">商品描述：</text>
+        <textarea class="add-goods-textarea" placeholder="请输入商品描述" bindinput="onTitleInput" style="height: 100rpx;" />
+    </view>
+    <button class="add-goods-btn" bindtap="onSubmitTap">添加商品</button>
+</view>
